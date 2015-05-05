@@ -1,21 +1,31 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-# Folder config file
-Desktop.ini
+# Precompiled Headers
+*.gch
+*.pch
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Fortran module files
+*.mod
 
-# Windows shortcuts
-*.lnk
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
 
 # =========================
 # Operating System Files
@@ -42,35 +52,26 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#################  
-## openFrameworks  
-#################  
+# Windows
+# =========================
 
-[Bb]in/*  
-![Bb]in/data/  
-[Bb]uild/  
-[Oo]bj/  
-*.o  
-[Dd]ebug*/  
-[Rr]elease*/  
-*.mode*  
-*.app/  
-*.pyc  
-*.log  
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
 
-#################  
-## Code::Blocks  
-#################  
+# Folder config file
+Desktop.ini
 
-*.depend  
-*.layout  
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-+bin/
-+Debug/
-+Release/
-+*.o
-+*.out
-+*.depend
-+*.layout
-+*.exe
-+lab/
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+bin/
