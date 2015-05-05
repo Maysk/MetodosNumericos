@@ -41,3 +41,36 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#################  
+## openFrameworks  
+#################  
+
+[Bb]in/*  
+![Bb]in/data/  
+[Bb]uild/  
+[Oo]bj/  
+*.o  
+[Dd]ebug*/  
+[Rr]elease*/  
+*.mode*  
+*.app/  
+*.pyc  
+*.log  
+
+#################  
+## Code::Blocks  
+#################  
+
+*.depend  
+*.layout  
+
++bin/
++Debug/
++Release/
++*.o
++*.out
++*.depend
++*.layout
++*.exe
++lab/
