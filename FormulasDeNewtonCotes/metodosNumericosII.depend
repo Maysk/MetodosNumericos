@@ -15,7 +15,7 @@
 1430867726 source:c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\src\main.cpp
 	"../lib/imports.h"
 
-1430870266 c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\lib\imports.h
+1430872324 c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\lib\imports.h
 	<iostream>
 	<cmath>
 	"NewtonCotes.h"
