@@ -12,3 +12,16 @@
 1430867726 source:c:\users\matheus\documents\cprojects\metodosnumericosii\src\main.cpp
 	"../lib/imports.h"
 
+1430867726 source:c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\src\main.cpp
+	"../lib/imports.h"
+
+1430870266 c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\lib\imports.h
+	<iostream>
+	<cmath>
+	"NewtonCotes.h"
+
+1426036231 c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\lib\newtoncotes.h
+
+1426036413 source:c:\users\matheus\documents\cprojects\metodosnumericos\formulasdenewtoncotes\src\newtoncotes.cpp
+	"../lib/imports.h"
+
