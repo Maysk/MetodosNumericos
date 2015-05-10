@@ -32,7 +32,9 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="lib/imports.h" />
+		<Unit filename="lib/quadraturaDeGauss.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/quadraturaDeGauss.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1431276676 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\main.cpp
+	"../lib/imports.h"
+
+1431287191 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\imports.h
+	<iostream>
+	<cmath>
+	"QuadraturaDeGauss.h"
+
+1431288958 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\quadraturadegauss.h
+
