@@ -12,11 +12,11 @@ public:
     void setTolerancia(double novaTolerancia);
 
     virtual double funcao(double x) = 0;
-    virtual double mudancaDeVariavel(double x, double a, double b) = 0;
     virtual double somatorio(int grauDoPolinomio, double a, double b) = 0;
 
     double integrar(int grauDoPolinomioDesejado);
 
 protected:
     QuadraturaDeGauss(double inicioDoIntervalo, double finalDoIntervalo, double tolerancia);
+
 };

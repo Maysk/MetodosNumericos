@@ -31,10 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lib/GaussLegendre.h" />
+		<Unit filename="lib/QuadraturaDeGauss.h" />
 		<Unit filename="lib/imports.h" />
-		<Unit filename="lib/quadraturaDeGauss.h" />
+		<Unit filename="src/GaussLegendre.cpp" />
+		<Unit filename="src/QuadraturaDeGauss.cpp" />
 		<Unit filename="src/main.cpp" />
-		<Unit filename="src/quadraturaDeGauss.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
