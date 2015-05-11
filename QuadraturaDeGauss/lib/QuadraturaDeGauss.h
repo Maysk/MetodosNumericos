@@ -11,9 +11,10 @@ public:
     double getTolerancia();
     void setTolerancia(double novaTolerancia);
 
-    double funcaoPolinomial(double x);
+    virtual double funcao(double x) = 0;
     virtual double mudancaDeVariavel(double x, double a, double b) = 0;
     virtual double somatorio(int grauDoPolinomio, double a, double b) = 0;
+
     double integrar(int grauDoPolinomioDesejado);
 
 protected:

@@ -1,11 +1,20 @@
 # depslib dependency file v1.0
-1431276676 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\main.cpp
+1431302491 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\main.cpp
 	"../lib/imports.h"
 
-1431287191 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\imports.h
+1431296071 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\imports.h
 	<iostream>
 	<cmath>
 	"QuadraturaDeGauss.h"
+	"GaussLegendre.h"
 
-1431288958 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\quadraturadegauss.h
+1431297323 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\quadraturadegauss.h
+
+1431298451 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausslegendre.h
+
+1431303575 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\quadraturadegauss.cpp
+	"../lib/imports.h"
+
+1431303599 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausslegendre.cpp
+	"../lib/imports.h"
 

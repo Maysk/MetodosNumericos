@@ -28,10 +28,6 @@ void QuadraturaDeGauss::setTolerancia(double novaTolerancia){
     this->tolerancia = novaTolerancia;
 }
 
-double QuadraturaDeGauss::funcaoPolinomial(double x){
-     return pow(1+pow(x/2,2),2);
-}
-
 double QuadraturaDeGauss::integrar(int grauDoPolinomioDesejado){
     int numeroDeParticoes;
     double tamanhoDeCadaParticao;
@@ -56,7 +52,7 @@ double QuadraturaDeGauss::integrar(int grauDoPolinomioDesejado){
             pontoAtual = pontoAtual + tamanhoDeCadaParticao;
         }
 
-    }while(abs(resultadoAtual - resultadoAnterior)<getTolerancia());
+    }while(abs(resultadoAtual - resultadoAnterior) > getTolerancia());
 
     return resultadoAtual;
 }
