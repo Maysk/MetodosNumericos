@@ -31,11 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lib/GaussChebyshev.h" />
+		<Unit filename="lib/GaussHermite.h" />
+		<Unit filename="lib/GaussLaguerre.h" />
 		<Unit filename="lib/GaussLegendre.h" />
-		<Unit filename="lib/QuadraturaDeGauss.h" />
 		<Unit filename="lib/imports.h" />
+		<Unit filename="src/GaussChebyshev.cpp" />
+		<Unit filename="src/GaussHermite.cpp" />
+		<Unit filename="src/GaussLaguerre.cpp" />
 		<Unit filename="src/GaussLegendre.cpp" />
-		<Unit filename="src/QuadraturaDeGauss.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />

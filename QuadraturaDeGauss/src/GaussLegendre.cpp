@@ -1,6 +1,30 @@
 #include "../lib/imports.h"
-GaussLegendre::GaussLegendre(double inicioDoIntervalo, double finalDoIntervalo, double tolerancia)
-    :QuadraturaDeGauss(inicioDoIntervalo, finalDoIntervalo, tolerancia){}
+GaussLegendre::GaussLegendre(double inicioDoIntervalo, double finalDoIntervalo, double tolerancia){
+    this->inicioDoIntervalo = inicioDoIntervalo;
+    this->finalDoIntervalo = finalDoIntervalo;
+    this->tolerancia = tolerancia;
+}
+
+double GaussLegendre::getInicioDoIntervalo(){
+    return inicioDoIntervalo;
+}
+void GaussLegendre::setInicioDoIntervalo(double novoInicio){
+    this->inicioDoIntervalo = novoInicio;
+}
+
+double GaussLegendre::getFinalDoIntervalo(){
+    return finalDoIntervalo;
+}
+void GaussLegendre::setFinalDoIntervalo(double novoFinal){
+    this->finalDoIntervalo = novoFinal;
+}
+
+double GaussLegendre::getTolerancia(){
+    return tolerancia;
+}
+void GaussLegendre::setTolerancia(double novaTolerancia){
+    this->tolerancia = novaTolerancia;
+}
 
 double GaussLegendre::funcao(double x){
     return exp(x);
@@ -29,4 +53,34 @@ double GaussLegendre::somatorio(int grauDoPolinomio, double a, double b){
 
     }
     return resultado;
+}
+
+
+double GaussLegendre::integrar(int grauDoPolinomioDesejado){
+    int numeroDeParticoes;
+    double tamanhoDeCadaParticao;
+    double pontoAtual;
+    double tamanhoTotal;
+    double resultadoAnterior;
+    double resultadoAtual;
+
+    numeroDeParticoes = 1;
+    tamanhoTotal = getFinalDoIntervalo() -  getInicioDoIntervalo();
+    resultadoAtual = somatorio(grauDoPolinomioDesejado, getInicioDoIntervalo(), getFinalDoIntervalo());
+
+    do{
+        numeroDeParticoes++;
+        tamanhoDeCadaParticao = tamanhoTotal/numeroDeParticoes;
+        pontoAtual = getInicioDoIntervalo();
+        resultadoAnterior = resultadoAtual;
+        resultadoAtual = 0;
+
+        for(int i=1; i<=numeroDeParticoes; i++){
+            resultadoAtual = resultadoAtual + somatorio(grauDoPolinomioDesejado, pontoAtual, pontoAtual + tamanhoDeCadaParticao);
+            pontoAtual = pontoAtual + tamanhoDeCadaParticao;
+        }
+
+    }while(abs(resultadoAtual - resultadoAnterior) > getTolerancia());
+
+    return resultadoAtual;
 }

@@ -1,12 +1,11 @@
 #include "../lib/imports.h"
-GaussHermite::GaussHermite(double tolerancia)
-    :QuadraturaDeGauss(inicioDoIntervalo, finalDoIntervalo, tolerancia){}
+GaussHermite::GaussHermite(){}
 
 double GaussHermite::funcao(double x){
     return exp(x);
 }
 
-double GaussHermite::somatorio(int grauDoPolinomio, double a, double b){
+double GaussHermite::somatorio(int grauDoPolinomio){
     double resultado;
     switch(grauDoPolinomio){
         case 2:
@@ -26,5 +25,10 @@ double GaussHermite::somatorio(int grauDoPolinomio, double a, double b){
         break;
 
     }
+    return resultado;
+}
+
+double GaussHermite::integrar(int grauDoPolinomioDesejado){
+    double resultado = somatorio(grauDoPolinomioDesejado);
     return resultado;
 }

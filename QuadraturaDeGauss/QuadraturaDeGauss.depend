@@ -1,11 +1,10 @@
 # depslib dependency file v1.0
-1431305795 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\main.cpp
+1431312343 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\main.cpp
 	"../lib/imports.h"
 
-1431305965 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\imports.h
+1431310432 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\imports.h
 	<iostream>
 	<cmath>
-	"QuadraturaDeGauss.h"
 	"GaussLegendre.h"
 	"GaussHermite.h"
 	"GaussLaguerre.h"
@@ -13,26 +12,26 @@
 
 1431308366 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\quadraturadegauss.h
 
-1431306212 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausslegendre.h
+1431310848 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausslegendre.h
 
 1431303575 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\quadraturadegauss.cpp
 	"../lib/imports.h"
 
-1431307004 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausslegendre.cpp
+1431310517 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausslegendre.cpp
 	"../lib/imports.h"
 
-1431308381 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausshermite.h
+1431312060 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausshermite.h
 
-1431306303 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausslaguerre.h
+1431311940 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausslaguerre.h
 
-1431306368 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausschebyshev.h
+1431312357 c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\lib\gausschebyshev.h
 
 1431306063 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausschebyshev.cpp
 	"../lib/imports.h"
 
-1431308018 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausshermite.cpp
+1431311923 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausshermite.cpp
 	"../lib/imports.h"
 
-1431306993 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausslaguerre.cpp
+1431311978 source:c:\users\matheus\documents\cprojects\metodosnumericos\quadraturadegauss\src\gausslaguerre.cpp
 	"../lib/imports.h"
 

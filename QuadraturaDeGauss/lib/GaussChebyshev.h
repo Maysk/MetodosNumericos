@@ -1,7 +1,7 @@
-class GaussChebyshev : public QuadraturaDeGauss{
-public:
-    GaussChebyshev(double inicioDoIntervalo, double finalDoIntervalo, double tolerancia);
+class GaussChebyshev{
     double funcao(double x);
-    double mudancaDeVariavel(double x, double a, double b);
-    double somatorio(int grauDoPolinomio, double a, double b);
+    double somatorio(int grauDoPolinomio);
+public:
+    GaussChebyshev();
+    double integrar(int grauDoPolinomioDesejado);
 };
