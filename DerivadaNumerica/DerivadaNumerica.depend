@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1432605032 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadanumerica.cpp
+	"../lib/imports.h"
+
+1432597602 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\main.cpp
+	"../lib/imports.h"
+
+1432606417 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\imports.h
+	<iostream>
+	<cmath>
+	<exception>
+	"DerivadaNumerica.h"
+	"DerivadaPrimeira.h"
+	"DerivadaSegunda.h"
+
+1432602066 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadaprimeira.h
+
+1432602130 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadasegunda.h
+
+1432606439 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadaprimeira.cpp
+	"../lib/imports.h"
+
+1432603101 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadasegunda.cpp
+	"../lib/imports.h"
+
+1432604912 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadanumerica.h
+
+1432605247 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\myexceptions.h
+
