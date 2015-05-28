@@ -4,7 +4,15 @@
 #include "DerivadaNumerica.h"
 #include "DerivadaPrimeira.h"
 #include "DerivadaSegunda.h"
-#define precisaoNaoImplementada "Precisao nao implementada."
+
 using namespace std;
+
+struct PrecisaoNaoDefinidaParaEsteMetodo: public exception
+{
+  const char * what () const throw ()
+  {
+    return "Precisao nao definida.";
+  }
+};
 
 

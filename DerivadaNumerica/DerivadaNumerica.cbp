@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lib/DerivadaNumerica.h" />
+		<Unit filename="lib/DerivadaPrimeira.h" />
+		<Unit filename="lib/DerivadaSegunda.h" />
+		<Unit filename="lib/imports.h" />
+		<Unit filename="src/DerivadaNumerica.cpp" />
+		<Unit filename="src/DerivadaPrimeira.cpp" />
+		<Unit filename="src/DerivadaSegunda.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
