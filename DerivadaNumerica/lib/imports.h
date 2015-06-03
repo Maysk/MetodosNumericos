@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <exception>
+#include <iostream>
 #include "DerivadaNumerica.h"
 #include "DerivadaPrimeira.h"
 #include "DerivadaSegunda.h"

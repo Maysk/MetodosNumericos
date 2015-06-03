@@ -2,7 +2,7 @@
 
 DerivadaPrimeira::DerivadaPrimeira(double deltaX):DerivadaNumerica(deltaX){}
 
-double DerivadaPrimeira::metodoFoward(double pontoX, int precisaoEscolhida){
+double DerivadaPrimeira::metodoForward(double pontoX, int precisaoEscolhida){
     double resultado;
     double delta = getDeltaX();
     switch(precisaoEscolhida){

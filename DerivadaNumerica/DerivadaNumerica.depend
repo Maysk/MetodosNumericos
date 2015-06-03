@@ -2,28 +2,29 @@
 1432605032 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadanumerica.cpp
 	"../lib/imports.h"
 
-1432771171 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\main.cpp
+1433291689 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\main.cpp
 	"../lib/imports.h"
 
-1432775251 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\imports.h
+1433291223 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\imports.h
 	<iostream>
 	<cmath>
 	<exception>
+	<iostream>
 	"DerivadaNumerica.h"
 	"DerivadaPrimeira.h"
 	"DerivadaSegunda.h"
 
-1432774634 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadaprimeira.h
+1433286753 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadaprimeira.h
 
-1432774634 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadasegunda.h
+1433286758 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadasegunda.h
 
-1432775291 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadaprimeira.cpp
+1433286763 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadaprimeira.cpp
 	"../lib/imports.h"
 
-1432774634 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadasegunda.cpp
+1433286725 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadasegunda.cpp
 	"../lib/imports.h"
 
-1432774634 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadanumerica.h
+1433289821 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadanumerica.h
 
 1432605247 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\myexceptions.h
 
