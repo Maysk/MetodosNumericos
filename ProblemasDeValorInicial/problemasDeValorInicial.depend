@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1434327569 source:c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\src\genericsolver.cpp
+	"../lib/imports.h"
+
+1434330647 source:c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\src\main.cpp
+	"../lib/imports.h"
+
+1434253440 c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\lib\imports.h
+	<iostream>
+	<cmath>
+	"GenericSolver.h"
+
+1434249831 c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\lib\euler.h
+
+1434249811 c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\lib\rungekutta.h
+
+1434249853 c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\lib\preditorcorretor.h
+
+1434332590 c:\users\matheus\documents\cprojects\metodosnumericos\problemasdevalorinicial\lib\genericsolver.h
+
