@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1435195578 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
+	"../lib/imports.h"
+
+1435195413 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
+	<iostream>
+	<cmath>
+	"matrix.h"
+
+1435196696 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
+
+1435195427 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
+	"../lib/imports.h"
+
