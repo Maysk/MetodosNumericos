@@ -31,8 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lib/exceptions.h" />
 		<Unit filename="lib/imports.h" />
 		<Unit filename="lib/matrix.h" />
+		<Unit filename="src/exceptions.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/matrix.cpp" />
 		<Extensions>

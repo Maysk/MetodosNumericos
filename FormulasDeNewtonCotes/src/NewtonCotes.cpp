@@ -1,14 +1,32 @@
 #include "../lib/imports.h"
 
-double IntegracaoNumerica(double pontoInicial, double pontoFinal, int numeroDePartes, RegraEscolhida regraEscolhida){
-    double somatorio = 0;
-    double pontoAtual = pontoInicial;
-    double tamanhoDeCadaParticao = (pontoFinal-pontoInicial)/numeroDePartes;
-    for(int i = 0; i < numeroDePartes; i++){
-        pontoAtual = pontoInicial + tamanhoDeCadaParticao * i;
-        somatorio = (regraEscolhida)(pontoAtual, pontoAtual + tamanhoDeCadaParticao) + somatorio;
-    }
-    return somatorio;
+double IntegracaoNumerica(double pontoInicial, double pontoFinal, double tolerancia, RegraEscolhida regraEscolhida){
+
+    int numeroDeParticoes;
+    double tamanhoTotal;
+    double pontoAtual;
+    double tamanhoDeCadaParticao;
+    double resultadoAnterior;
+    double resultadoAtual;
+
+    numeroDeParticoes = 1;
+    tamanhoTotal = pontoFinal - pontoInicial;
+    resultadoAtual = (regraEscolhida)(pontoInicial, pontoFinal);
+
+    do{
+        numeroDeParticoes++;
+        tamanhoDeCadaParticao = tamanhoTotal/numeroDeParticoes;
+        pontoAtual = pontoInicial;
+        resultadoAnterior = resultadoAtual;
+        resultadoAtual = 0;
+
+        for(int i = 0; i < numeroDeParticoes; i++){
+            resultadoAtual = (regraEscolhida)(pontoAtual, pontoAtual + tamanhoDeCadaParticao) + resultadoAtual;
+            pontoAtual = pontoAtual + tamanhoDeCadaParticao;
+        }
+
+    }while(abs(resultadoAtual - resultadoAnterior) > tolerancia);
+    return resultadoAtual;
 }
 
 

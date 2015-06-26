@@ -1,6 +1,6 @@
 typedef double (*RegraEscolhida)(double,double);
 
-double IntegracaoNumerica(double pontoInicial, double pontoFinal, int numeroDePartes, RegraEscolhida regraEscolhida);
+double IntegracaoNumerica(double pontoInicial, double pontoFinal, double tolerancia, RegraEscolhida regraEscolhida);
 
 double regraDoTrapezioFechado(double a, double b);
 double regraDoTrapezioAberto(double a, double b);

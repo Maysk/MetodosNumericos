@@ -1,7 +1,8 @@
 
 class Matrix{
     int numberOfLines;
-    int numberOfColumn;
+    int numberOfColumns;
+    bool isVector;
     double **content;
 
 public:
@@ -10,9 +11,16 @@ public:
 
     void setValue(int line, int column, int newValue);
     double getValue(int line, int column);
+    int getNumberOfLines();
+    int getNumberOfColumns();
+    void printMatrix();
+    bool isSquareMatrix();
+    Matrix* getTransposed();
 
-    static bool isMultipliable(Matrix* A, Matrix* B);
     static Matrix* multiplyMatrix(Matrix* A, Matrix* B);
     static Matrix* multiplyMatrix(Matrix* A, Matrix* B, Matrix* C);
+    static Matrix* generateIdentityMatrix(int numberOfLines, int numberOfColumns);
+
+
 
 };

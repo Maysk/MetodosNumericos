@@ -3,14 +3,14 @@
 void solve(RegraEscolhida regraEscolhida){
     double pontoInicial, pontoFinal;
     double resultado;
-    int numeroDeParticoes;
+    double tolerancia;
     cout << "Ponto Inicial: ";
     cin >> pontoInicial;
     cout << "Ponto Final: ";
     cin >> pontoFinal;
-    cout << "Numero de particoes: ";
-    cin >> numeroDeParticoes;
-    resultado = IntegracaoNumerica(pontoInicial, pontoFinal, numeroDeParticoes, regraEscolhida);
+    cout << "Tolerancia: ";
+    cin >> tolerancia;
+    resultado = IntegracaoNumerica(pontoInicial, pontoFinal, tolerancia, regraEscolhida);
     cout << "O resultado e' "<< resultado <<endl<<endl;
 }
 
