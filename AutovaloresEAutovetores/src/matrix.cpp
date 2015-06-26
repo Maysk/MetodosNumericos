@@ -37,8 +37,20 @@ int Matrix::getNumberOfColumns(){
 }
 
 
+Matrix* Matrix::multiplyMatrixByScalar(Matrix *A, double scalar){
+    Matrix *matrixResultado = new Matrix(A->getNumberOfLines(), A->getNumberOfColumns());
+    for(int i = 0; i<A->numberOfLines; i++){
+        for(int j = 0; j<A->numberOfColumns; j++){
+            matrixResultado->setValue(i,j, scalar * A->getValue(i,j));
+        }
+    }
+    return matrixResultado;
 
-Matrix* Matrix::multiplyMatrix(Matrix* A, Matrix* B){
+}
+
+
+
+Matrix* Matrix::multiplyMatrixByMatrix(Matrix* A, Matrix* B){
     double resultadoDaPosicao;
     Matrix *matrixResultado;
 

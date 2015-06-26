@@ -17,8 +17,8 @@ public:
     bool isSquareMatrix();
     Matrix* getTransposed();
 
-    static Matrix* multiplyMatrix(Matrix* A, Matrix* B);
-    static Matrix* multiplyMatrix(Matrix* A, Matrix* B, Matrix* C);
+    static Matrix* multiplyMatrixByScalar(Matrix *A, double scalar);
+    static Matrix* multiplyMatrixByMatrix(Matrix* A, Matrix* B);
     static Matrix* generateIdentityMatrix(int numberOfLines, int numberOfColumns);
 
 };
