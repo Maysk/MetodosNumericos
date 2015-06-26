@@ -21,6 +21,4 @@ public:
     static Matrix* multiplyMatrix(Matrix* A, Matrix* B, Matrix* C);
     static Matrix* generateIdentityMatrix(int numberOfLines, int numberOfColumns);
 
-
-
 };

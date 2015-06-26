@@ -29,6 +29,6 @@ public:
     double rungeKuttaSegundaOrdem();
     double rungeKuttaTerceiraOrdem();
     double rungeKuttaQuartaOrdem();
-    double preditorCorretorTerceiraOrdem();
-    double preditorCorretorQuartaOrdem();
+    double preditorCorretorTerceiraOrdem(int chosenMethod);
+    double preditorCorretorQuartaOrdem(int chosenMethod);
 };

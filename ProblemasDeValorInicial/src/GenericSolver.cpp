@@ -175,7 +175,92 @@ double GenericSolver::rungeKuttaQuartaOrdem(){
 }
 
 
-double GenericSolver::preditorCorretorTerceiraOrdem(){
+double GenericSolver::preditorCorretorTerceiraOrdem(int metodoEscolhido){
+    GenericSolver generic(this->t, this->deltaT, this->valorInicialDeY);
+    double preditorResult;
+    double derivadaDoPreditor;
+    double corretorResult;
+
+
+    if(metodoEscolhido == FORWARD_EULER)
+    {
+        generic.forwardEuler();
+    }
+    else if(metodoEscolhido ==  RUNGEKUTTA_2ORDEM)
+    {
+        generic.rungeKuttaSegundaOrdem();
+    }
+    else if(metodoEscolhido ==  RUNGEKUTTA_3ORDEM)
+    {
+        generic.rungeKuttaTerceiraOrdem();
+    }
+    else if(metodoEscolhido ==  RUNGEKUTTA_4ORDEM)
+    {
+        generic.rungeKuttaQuartaOrdem();
+    }
+    else{
+        throw METHOD_NOT_DEFINED;
+    }
+
+    for(int i = 0; i<3; i++){
+        setValorDeY(i,generic.getValorDeY(i));
+        setValorDeDerivadaDeY(i, generic.getValorDeDerivadaDeY(i));
+    }
+
+
+    for(int i = 3; i<=numeroDeRodadas; i++){
+        preditorResult = getValorDeY(i-1) + deltaT * (23 * getValorDeDerivadaDeY(i-1) - 16 * getValorDeDerivadaDeY(i-2) + 5 * getValorDeDerivadaDeY(i - 3)) / 12;
+        derivadaDoPreditor = derivadaDaFuncao(preditorResult, i*deltaT);
+        corretorResult = getValorDeY(i-1) + deltaT * (5 * derivadaDoPreditor + 8 * getValorDeDerivadaDeY(i-1) - getValorDeDerivadaDeY(i-2)) /12;
+        setValorDeDerivadaDeY(i,derivadaDaFuncao(corretorResult,i*deltaT));
+    }
+
+    return getValorDeY(numeroDeRodadas);
+
+
+}
+
+double GenericSolver::preditorCorretorQuartaOrdem(int metodoEscolhido){
+    GenericSolver generic(this->t, this->deltaT, this->valorInicialDeY);
+    double preditorResult;
+    double derivadaDoPreditor;
+    double corretorResult;
+
+
+    if(metodoEscolhido == FORWARD_EULER)
+    {
+        generic.forwardEuler();
+    }
+    else if(metodoEscolhido ==  RUNGEKUTTA_2ORDEM)
+    {
+        generic.rungeKuttaSegundaOrdem();
+    }
+    else if(metodoEscolhido ==  RUNGEKUTTA_3ORDEM)
+    {
+        generic.rungeKuttaTerceiraOrdem();
+    }
+    else if(metodoEscolhido ==  RUNGEKUTTA_4ORDEM)
+    {
+        generic.rungeKuttaQuartaOrdem();
+    }
+    else{
+        throw METHOD_NOT_DEFINED;
+    }
+
+    for(int i = 0; i<4; i++){
+        setValorDeY(i,generic.getValorDeY(i));
+        setValorDeDerivadaDeY(i, generic.getValorDeDerivadaDeY(i));
+    }
+
+
+    for(int i = 4; i<=numeroDeRodadas; i++){
+        preditorResult = getValorDeY(i-1) + deltaT * (55 * getValorDeDerivadaDeY(i-1) - 59 * getValorDeDerivadaDeY(i-2) + 37 * getValorDeDerivadaDeY(i-3) - 9 * getValorDeDerivadaDeY(i-4)) / 24;
+        derivadaDoPreditor = derivadaDaFuncao(preditorResult, i*deltaT);
+        corretorResult = getValorDeY(i-1) + deltaT * (9 * derivadaDoPreditor + 19 * getValorDeDerivadaDeY(i-1) - 5 * getValorDeDerivadaDeY(i-2) + getValorDeDerivadaDeY(i-3)) / 24;
+        setValorDeDerivadaDeY(i,derivadaDaFuncao(corretorResult,i*deltaT));
+    }
+
+    return getValorDeY(numeroDeRodadas);
 
 }
 
