@@ -8,7 +8,7 @@ public:
     Matrix(int numberOfLines, int numberOfColumn);
     ~Matrix();
 
-    void setValue(int line, int column, int newValue);
+    void setValue(int line, int column, double newValue);
     double getValue(int line, int column);
     int getNumberOfLines();
     int getNumberOfColumns();

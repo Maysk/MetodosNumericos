@@ -24,7 +24,7 @@ Matrix::~Matrix(){
     delete [] content;
 }
 
-void Matrix::setValue(int line, int column, int newValue){
+void Matrix::setValue(int line, int column, double newValue){
     this->content[line][column] = newValue;
 }
 
