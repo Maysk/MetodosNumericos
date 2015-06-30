@@ -5,6 +5,10 @@ Matrix::Matrix(int numberOfLines, int numberOfColumns){
     this->numberOfLines = numberOfLines;
     this->numberOfColumns = numberOfColumns;
 
+    if(this->numberOfColumns == 0 or this->numberOfLines == 0){
+        throw INVALID_MATRIX;
+    }
+
     for(int i=0; i < numberOfLines; i++){
         this->content[i] = new double[numberOfColumns];
         for(int j = 0; j < numberOfColumns; j++){
@@ -36,6 +40,40 @@ int Matrix::getNumberOfColumns(){
     return this->numberOfColumns;
 }
 
+bool Matrix::isSquareMatrix(){
+    if(this->numberOfColumns==this->numberOfLines){
+        return true;
+    }
+    return false;
+}
+
+double Matrix::calculeVectorNorm(){
+    double normaEuclidiana = 0;
+    if(this->getNumberOfColumns()==1){
+        for(int i=0; i<this->getNumberOfLines(); i++){
+            normaEuclidiana = normaEuclidiana + pow(this->getValue(i,0),2);
+        }
+        return sqrt(normaEuclidiana);
+
+    }else if(this->getNumberOfLines()==1){
+        for(int i=0; i<this->getNumberOfColumns(); i++){
+            normaEuclidiana = normaEuclidiana + pow(this->getValue(0,i),2);
+        }
+        return sqrt(normaEuclidiana);
+    }
+    else{
+        throw NOT_VECTOR;
+    }
+}
+
+Matrix* Matrix::normalizeVector(){
+    double euclidianNorm = this->calculeVectorNorm();
+    Matrix* resultado = Matrix::multiplyMatrixByScalar(this, 1/euclidianNorm);
+    return resultado;
+}
+
+
+
 
 Matrix* Matrix::multiplyMatrixByScalar(Matrix *A, double scalar){
     Matrix *matrixResultado = new Matrix(A->getNumberOfLines(), A->getNumberOfColumns());
@@ -47,7 +85,6 @@ Matrix* Matrix::multiplyMatrixByScalar(Matrix *A, double scalar){
     return matrixResultado;
 
 }
-
 
 
 Matrix* Matrix::multiplyMatrixByMatrix(Matrix* A, Matrix* B){
@@ -71,6 +108,27 @@ Matrix* Matrix::multiplyMatrixByMatrix(Matrix* A, Matrix* B){
         throw NOT_MULTIPLIABLE;
     }
 
+}
+
+
+Matrix* Matrix::subtractMatrixByMatrix(Matrix* A, Matrix* B){
+    Matrix *matrixResultado = new Matrix(A->getNumberOfLines(), A->getNumberOfColumns());
+    for(int i = 0; i<A->numberOfLines; i++){
+        for(int j = 0; j<A->numberOfColumns; j++){
+            matrixResultado->setValue(i,j, A->getValue(i,j) - B->getValue(i,j));
+        }
+    }
+    return matrixResultado;
+}
+
+Matrix* Matrix::getCopy(){
+    Matrix* matrixCopy = new Matrix(this->numberOfLines, this->numberOfColumns);
+    for(int i = 0; i<this->numberOfLines; i++){
+        for(int j =0; j<this->numberOfColumns; j++){
+            matrixCopy->setValue(i, j, this->getValue(i,j));
+        }
+    }
+    return matrixCopy;
 }
 
 void Matrix::printMatrix(){
