@@ -8,18 +8,20 @@ PotenciaRegular::PotenciaRegular(Matrix* autovetorChute, Matrix* A){
 void PotenciaRegular::solve(double precisao){
     Matrix* yPassado;
     Matrix* yAtual;
-    Matrix* condicaoDeParada;
-    yAtual = autovetorChute->normalizeVector();
+    Matrix* yPassadoNormalizado;
+    Matrix* yAtualNormalizado;
+
+    yAtual = this->autovetorChute;
+    yAtualNormalizado = yAtual->normalizeVector();
     do{
-        yAtual->printMatrix();
         yPassado = yAtual;
-        yAtual = Matrix::multiplyMatrixByMatrix(A, yPassado);
-        yAtual = yAtual->normalizeVector();
-        condicaoDeParada = Matrix::subtractMatrixByMatrix(yAtual, yPassado);
-
-        cout<<condicaoDeParada->calculeVectorNorm()<<endl;
-
-    }while(condicaoDeParada->calculeVectorNorm() < precisao);
+        yPassadoNormalizado = yAtualNormalizado;
+        yAtual = Matrix::multiplyMatrixByMatrix(A,yPassadoNormalizado);
+        yAtualNormalizado = yAtual->normalizeVector();
+        this->autovetor = Matrix::multiplyMatrixByMatrix(yAtualNormalizado->getTransposed(), Matrix::multiplyMatrixByMatrix(A, yAtualNormalizado));
+        this->autovetor->printMatrix();
+        cout<<"passouaqui"<<endl;
+    }while(Matrix::subtractMatrixByMatrix(yAtual, yPassado)->calculeVectorNorm() < precisao);
 
     this->autovetor = yAtual;
 }

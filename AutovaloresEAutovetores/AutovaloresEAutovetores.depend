@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1435692196 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
+1435705173 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
 	"../lib/imports.h"
 
 1435623323 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
@@ -12,7 +12,7 @@
 
 1435694154 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
 
-1435691376 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
+1435702946 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
 	"../lib/imports.h"
 
 1435280630 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\exceptions.h
@@ -21,6 +21,6 @@
 
 1435688063 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciaregular.h
 
-1435689001 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
+1435705131 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
 	"../lib/imports.h"
 

@@ -111,6 +111,7 @@ Matrix* Matrix::multiplyMatrixByMatrix(Matrix* A, Matrix* B){
 }
 
 
+
 Matrix* Matrix::subtractMatrixByMatrix(Matrix* A, Matrix* B){
     Matrix *matrixResultado = new Matrix(A->getNumberOfLines(), A->getNumberOfColumns());
     for(int i = 0; i<A->numberOfLines; i++){
@@ -119,6 +120,18 @@ Matrix* Matrix::subtractMatrixByMatrix(Matrix* A, Matrix* B){
         }
     }
     return matrixResultado;
+}
+
+
+Matrix* Matrix::getTransposed(){
+    Matrix* trans = new Matrix(this->numberOfColumns, this->numberOfLines);
+    for(int i=0; i<this->numberOfLines ; i++){
+        for(int j=i; j<this->numberOfColumns; j++){
+            trans->setValue(j, i, this->getValue(i,j));
+            trans->setValue(i, j, this->getValue(j,i));
+        }
+    }
+    return trans;
 }
 
 Matrix* Matrix::getCopy(){
