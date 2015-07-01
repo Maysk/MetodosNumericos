@@ -5,6 +5,7 @@
 #include "exceptions.h"
 #include "matrix.h"
 #include "potenciaRegular.h"
+#include "potenciaInversa.h"
 
 #define NOT_MULTIPLIABLE 43
 #define NOT_SUB 42

@@ -52,7 +52,6 @@ bool Matrix::isSquareMatrix(){
 
 double Matrix::calculeVectorNorm(){
     double normaEuclidiana = 0;
-    double aux;
     if(this->getNumberOfColumns()==1){
         for(int i=0; i<this->getNumberOfLines(); i++){
             normaEuclidiana = normaEuclidiana + pow(this->getValue(i,0),2);
