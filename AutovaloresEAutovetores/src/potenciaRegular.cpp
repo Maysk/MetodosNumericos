@@ -17,7 +17,6 @@ void PotenciaRegular::solve(double precisao){
 
     lambdaAtual = (yAtual.vectorColumnToLine()*xSeguinte).getValue(0,0);
 
-
     do{
         yAtual = xSeguinte.normalizeVector();
         xSeguinte = A * yAtual;

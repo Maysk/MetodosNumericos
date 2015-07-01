@@ -220,6 +220,41 @@ Matrix Matrix::getTransposedOfSquareMatrix(){
 
 
 
+Matrix Matrix::getInverse(){
+    Matrix inverse = Matrix::generateIdentityMatrix(this->numberOfLines);
+    Matrix original = (*this);
+    double pivo;
+    double posZerada;
+    if(this->isSquareMatrix())
+
+    for(int k=0; k < this->numberOfLines; k++){
+        pivo=original.getValue(k, k);
+        for(int j=k; j < this->numberOfLines; j++){
+            original.setValue(k,j, original.getValue(k,j)/pivo);
+        }
+        for(int j=0; j < this->numberOfLines; j++){
+            inverse.setValue(k,j, inverse.getValue(k,j)/pivo);
+        }
+
+
+        for(int i=0; i < this->numberOfLines; i++){
+            if(i!=k){
+                posZerada = original.getValue(i,k);
+                for(int j=k; j < this->numberOfLines;j++){
+                    original.setValue(i,j, original.getValue(i,j) - original.getValue(k,j)*posZerada);
+                }
+                for(int j=0; j < this->numberOfLines;j++){
+                    inverse.setValue(i,j, inverse.getValue(i,j) - inverse.getValue(k,j)*posZerada);
+                }
+            }
+
+        }
+    }
+    return inverse;
+}
+
+
+
 Matrix Matrix::getCopy(){
     Matrix matrixCopy(this->numberOfLines, this->numberOfColumns);
     for(int i = 0; i < this->numberOfLines; i++){
@@ -239,4 +274,13 @@ void Matrix::printMatrix(){
         cout << "]" <<endl;
     }
     cout << endl;
+}
+
+
+Matrix Matrix::generateIdentityMatrix(int numberOfLines){
+    Matrix identity(numberOfLines, numberOfLines);
+    for(int i = 0; i<numberOfLines; i++){
+        identity.setValue(i,i,1);
+    }
+    return identity;
 }

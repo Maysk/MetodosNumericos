@@ -16,7 +16,7 @@ public:
     int getNumberOfColumns() const;
     Matrix getTransposedOfSquareMatrix();
     Matrix getCopy();
-
+    Matrix getInverse();
     bool isSquareMatrix();
     void printMatrix();
 
@@ -32,6 +32,6 @@ public:
     Matrix operator* (Matrix B);
     Matrix operator- (Matrix B);
 
-    static Matrix* generateIdentityMatrix(int numberOfLines);
+    static Matrix generateIdentityMatrix(int numberOfLines);
 
 };

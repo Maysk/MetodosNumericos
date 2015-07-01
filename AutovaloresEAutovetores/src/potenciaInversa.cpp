@@ -5,27 +5,26 @@ PotenciaInversa::PotenciaInversa(const Matrix AInv, const Matrix autovetorChute)
 }
 
 void PotenciaInversa::solve(double precisao){
-    Matrix yAtual = this->autovetorChute;
-    Matrix ySeguinte;
-    Matrix yAtualNormalizado;
+    Matrix xAtual;
+    Matrix xSeguinte;
+    Matrix yAtual;
     double lambdaAtual;
     double lambdaAnterior;
 
-    yAtualNormalizado = yAtual.normalizeVector();
-    ySeguinte = AInv * yAtualNormalizado;
+    xAtual = this->autovetorChute; //x0
+    yAtual = xAtual.normalizeVector(); //theta 0
+    xSeguinte = AInv * yAtual; //x1
 
-    lambdaAtual = (ySeguinte.vectorColumnToLine()).internProduct(yAtualNormalizado);
-
+    lambdaAtual = (yAtual.vectorColumnToLine()*xSeguinte).getValue(0,0); //lambda0
     do{
-        yAtual = ySeguinte;
+        yAtual = xSeguinte.normalizeVector(); // theta i
+        xSeguinte = AInv * yAtual; // xi+1
         lambdaAnterior = lambdaAtual;
-        yAtualNormalizado = yAtual.normalizeVector();
-        ySeguinte = AInv * yAtualNormalizado;
-        lambdaAtual = (ySeguinte.vectorColumnToLine()).internProduct(yAtualNormalizado);
-    }while(lambdaAtual - lambdaAnterior > precisao);
+        lambdaAtual = (yAtual.vectorColumnToLine()*xSeguinte).getValue(0,0); //lambda i = thetaT i * xi+1
+    }while(abs(1/lambdaAtual - 1/lambdaAnterior) >= precisao);
+
     this->autovalor = 1/lambdaAtual;
     this->autovetor = yAtual;
-
 }
 
 Matrix PotenciaInversa::getAutovetor(){
