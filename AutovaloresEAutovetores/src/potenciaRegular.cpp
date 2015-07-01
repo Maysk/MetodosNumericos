@@ -1,8 +1,7 @@
 #include "../lib/imports.h"
 
-PotenciaRegular::PotenciaRegular(Matrix autovetorChute, Matrix A){
-    this->autovetorChute = autovetorChute;
-    this->A = A;
+PotenciaRegular::PotenciaRegular(const Matrix A, const Matrix autovetorChute): A(A), autovetorChute(autovetorChute){
+
 }
 
 void PotenciaRegular::solve(double precisao){
@@ -15,8 +14,7 @@ void PotenciaRegular::solve(double precisao){
     yAtualNormalizado = yAtual.normalizeVector();
     ySeguinte = A * yAtualNormalizado;
 
-    lambdaAtual = (A*yAtualNormalizado).internProduct(yAtualNormalizado);
-
+    lambdaAtual = (yAtualNormalizado.vectorColumnToLine()).internProduct(ySeguinte);
 
 
     do{
@@ -24,10 +22,12 @@ void PotenciaRegular::solve(double precisao){
         lambdaAnterior = lambdaAtual;
         yAtualNormalizado = yAtual.normalizeVector();
         ySeguinte = A * yAtualNormalizado;
-        lambdaAtual = (A*yAtualNormalizado).internProduct(yAtualNormalizado);
-    }while(lambdaAtual - lambdaAnterior > precisao);
+        lambdaAtual = (yAtualNormalizado.vectorColumnToLine()).internProduct(ySeguinte);
+
+
+    }while(abs(lambdaAtual - lambdaAnterior) > precisao);
     this->autovalor = lambdaAtual;
-    this->autovetor = yAtual;
+    this->autovetor = yAtualNormalizado;
 
 }
 

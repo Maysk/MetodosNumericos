@@ -4,7 +4,7 @@ class PotenciaRegular{
     Matrix autovetor;
     double autovalor;
 public:
-    PotenciaRegular(Matrix autovetorChute, Matrix A);
+    PotenciaRegular(const Matrix A, const Matrix autovetorChute);
     void solve(double precisao);
     Matrix getAutovetor();
     double getAutovalor();

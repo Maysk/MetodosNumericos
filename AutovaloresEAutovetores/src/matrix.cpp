@@ -1,5 +1,26 @@
 #include "../lib/imports.h"
-Matrix::Matrix(){}
+
+Matrix::Matrix(){
+    this->numberOfLines = 0;
+    this->numberOfColumns = 0;
+    this->content = NULL;
+}
+
+
+Matrix::Matrix(const Matrix &obj){
+    this->numberOfLines = obj.numberOfLines;
+    this->numberOfColumns = obj.numberOfColumns;
+    this->content = new double*[numberOfLines];
+    double aux;
+
+    for(int i = 0; i < this->numberOfLines; i++){
+        this->content[i] = new double[this->numberOfColumns];
+        for(int j = 0; j < this->numberOfColumns; j++){
+            aux = obj.getValue(i,j);
+            this->setValue(i, j, aux);
+        }
+    }
+}
 
 Matrix::Matrix(int numberOfLines, int numberOfColumns){
     this->content = new double*[numberOfLines];
@@ -19,27 +40,26 @@ Matrix::Matrix(int numberOfLines, int numberOfColumns){
 }
 
 Matrix::~Matrix(){
-    /*
     for(int i = 0; i<numberOfLines; i++){
         delete [] content[i];
     }
     delete [] content;
-    */
+
 }
 
 void Matrix::setValue(int line, int column, double newValue){
     this->content[line][column] = newValue;
 }
 
-double Matrix::getValue(int line, int column){
+double Matrix::getValue(int line, int column) const{
     return this->content[line][column];
 }
 
-int Matrix::getNumberOfLines(){
+int Matrix::getNumberOfLines() const{
     return this->numberOfLines;
 }
 
-int Matrix::getNumberOfColumns(){
+int Matrix::getNumberOfColumns() const{
     return this->numberOfColumns;
 }
 
@@ -74,6 +94,50 @@ Matrix Matrix::normalizeVector(){
     Matrix resultado = (*this) * (1/euclidianNorm);
     return resultado;
 }
+
+Matrix Matrix::vectorLineToColumn(){
+    if(this->numberOfLines == 1 ){
+        Matrix trans(this->numberOfColumns, 1);
+        for(int i = 0; i < this->numberOfColumns; i++){
+            trans.setValue(i,0,this->getValue(0,i));
+        }
+        return trans;
+    }
+    else{
+        throw NOT_VECTOR;
+    }
+}
+Matrix Matrix::vectorColumnToLine(){
+    if(this->numberOfColumns == 1 ){
+        Matrix trans(1, this->numberOfLines);
+        for(int i = 0; i < this->numberOfLines; i++){
+            trans.setValue(0,i,this->getValue(i,0));
+        }
+        return trans;
+    }
+    else{
+        throw NOT_VECTOR;
+    }
+}
+
+
+Matrix& Matrix::operator=(const Matrix& obj){
+    this->numberOfLines = obj.numberOfLines;
+    this->numberOfColumns = obj.numberOfColumns;
+    this->content = new double*[numberOfLines];
+    double aux;
+
+    for(int i = 0; i < this->numberOfLines; i++){
+        this->content[i] = new double[this->numberOfColumns];
+        for(int j = 0; j < this->numberOfColumns; j++){
+            aux = obj.getValue(i,j);
+            this->setValue(i, j, aux);
+        }
+    }
+    return *this;
+}
+
+
 
 Matrix Matrix::operator*(double scalar){
     Matrix matrixResultado(this->getNumberOfLines(), this->getNumberOfColumns());
@@ -126,15 +190,9 @@ Matrix Matrix::operator-(Matrix B){
 
 double Matrix::internProduct(Matrix B){
     double resultado = 0;
-    if(this->numberOfColumns == B.getNumberOfColumns() and this->numberOfLines == 1 and B.getNumberOfLines() == 1){
-        for(int i = 0; i < this->numberOfColumns; i++){
-            resultado = resultado + (this->getValue(0,i) * B.getValue(0,i));
-        }
-        return resultado;
-    }
-    else if(this->numberOfLines == B.getNumberOfLines() and this->numberOfColumns == 1 and B.getNumberOfColumns() == 1){
+    if(this->numberOfColumns == B.getNumberOfLines() and this->numberOfLines == 1 and B.getNumberOfColumns() == 1){
         for(int i = 0; i < this->numberOfLines; i++){
-            resultado = resultado + (this->getValue(i,0) * B.getValue(i,0));
+            resultado = resultado + (this->getValue(0,i) * B.getValue(i,0));
         }
         return resultado;
     }
@@ -144,16 +202,23 @@ double Matrix::internProduct(Matrix B){
 
 }
 
-Matrix Matrix::getTransposed(){
-    Matrix trans(this->numberOfColumns, this->numberOfLines);
-    for(int i=0; i<this->numberOfLines ; i++){
-        for(int j=i; j<this->numberOfColumns; j++){
-            trans.setValue(j, i, this->getValue(i,j));
-            trans.setValue(i, j, this->getValue(j,i));
+Matrix Matrix::getTransposedOfSquareMatrix(){
+    if(this->isSquareMatrix()){
+        Matrix trans(this->numberOfColumns, this->numberOfLines);
+        for(int i=0; i<this->numberOfLines ; i++){
+            for(int j=i; j<this->numberOfColumns; j++){
+                trans.setValue(j, i, this->getValue(i,j));
+                trans.setValue(i, j, this->getValue(j,i));
+            }
+        return trans;
         }
     }
-    return trans;
+    else{
+        throw GENERIC_ERROR;
+    }
 }
+
+
 
 Matrix Matrix::getCopy(){
     Matrix matrixCopy(this->numberOfLines, this->numberOfColumns);
