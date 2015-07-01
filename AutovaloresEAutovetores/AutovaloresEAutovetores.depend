@@ -1,26 +1,27 @@
 # depslib dependency file v1.0
-1435709167 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
+1435756076 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
 	"../lib/imports.h"
 
-1435623323 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
+1435720344 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
 	<iostream>
 	<cmath>
 	<exception>
+	<iomanip>
 	"exceptions.h"
 	"matrix.h"
 	"potenciaRegular.h"
 
-1435694154 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
+1435715215 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
 
-1435702946 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
+1435721032 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
 	"../lib/imports.h"
 
 1435280630 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\exceptions.h
 
 1435279873 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\exceptions.cpp
 
-1435688063 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciaregular.h
+1435718154 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciaregular.h
 
-1435709307 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
+1435756137 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
 	"../lib/imports.h"
 

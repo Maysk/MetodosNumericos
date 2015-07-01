@@ -5,6 +5,7 @@ class Matrix{
     double **content;
 
 public:
+    Matrix();
     Matrix(int numberOfLines, int numberOfColumn);
     ~Matrix();
 
@@ -12,18 +13,21 @@ public:
     double getValue(int line, int column);
     int getNumberOfLines();
     int getNumberOfColumns();
-    Matrix* getTransposed();
-    Matrix* getCopy();
+    Matrix getTransposed();
+    Matrix getCopy();
 
     bool isSquareMatrix();
     void printMatrix();
+
+    //Operacoes para vetores
     double calculeVectorNorm();
-    Matrix* normalizeVector();
+    Matrix normalizeVector();
+    double internProduct(Matrix B);
+    //--
 
-    static Matrix* multiplyMatrixByScalar(Matrix *A, double scalar);
-    static Matrix* multiplyMatrixByMatrix(Matrix* A, Matrix* B);
-
-    static Matrix* subtractMatrixByMatrix(Matrix* A, Matrix* B);
+    Matrix operator*(double scalar);
+    Matrix operator*(Matrix B);
+    Matrix operator-(Matrix B);
 
     static Matrix* generateIdentityMatrix(int numberOfLines);
 

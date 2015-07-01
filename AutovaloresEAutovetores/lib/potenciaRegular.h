@@ -1,10 +1,11 @@
 class PotenciaRegular{
-    Matrix* A;
-    Matrix* autovetorChute;
-    Matrix* autovetor;
+    Matrix A;
+    Matrix autovetorChute;
+    Matrix autovetor;
     double autovalor;
 public:
-    PotenciaRegular(Matrix* autovetorChute, Matrix* A);
+    PotenciaRegular(Matrix autovetorChute, Matrix A);
     void solve(double precisao);
-    Matrix* getAutoVetor();
+    Matrix getAutovetor();
+    double getAutovalor();
 };

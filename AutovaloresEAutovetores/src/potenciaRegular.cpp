@@ -1,34 +1,41 @@
 #include "../lib/imports.h"
 
-PotenciaRegular::PotenciaRegular(Matrix* autovetorChute, Matrix* A){
+PotenciaRegular::PotenciaRegular(Matrix autovetorChute, Matrix A){
     this->autovetorChute = autovetorChute;
     this->A = A;
 }
 
 void PotenciaRegular::solve(double precisao){
-    Matrix* yPassado;
-    Matrix* yAtual;
-    Matrix* yPassadoNormalizado;
-    Matrix* yAtualNormalizado;
-    Matrix* aux;
+    Matrix yAtual = this->autovetorChute;
+    Matrix ySeguinte;
+    Matrix yAtualNormalizado;
+    double lambdaAtual;
+    double lambdaAnterior;
 
-    yAtual = this->autovetorChute;
-    yAtualNormalizado = yAtual->normalizeVector();
+    yAtualNormalizado = yAtual.normalizeVector();
+    ySeguinte = A * yAtualNormalizado;
 
-    int i =0;
+    lambdaAtual = (A*yAtualNormalizado).internProduct(yAtualNormalizado);
+
+
+
     do{
-        i++;
-        yAtual->printMatrix();
-        yPassado = yAtual;
-        yPassadoNormalizado = yAtualNormalizado;
-        yAtual = Matrix::multiplyMatrixByMatrix(A,yPassado);
-        yAtualNormalizado = yAtual->normalizeVector();
-        aux = Matrix::subtractMatrixByMatrix(yAtualNormalizado, yPassadoNormalizado);
-    }while( aux->calculeVectorNorm() > precisao);
-    yAtual->printMatrix();
+        yAtual = ySeguinte;
+        lambdaAnterior = lambdaAtual;
+        yAtualNormalizado = yAtual.normalizeVector();
+        ySeguinte = A * yAtualNormalizado;
+        lambdaAtual = (A*yAtualNormalizado).internProduct(yAtualNormalizado);
+
+    }while(lambdaAtual - lambdaAnterior > precisao);
+    this->autovalor = lambdaAtual;
     this->autovetor = yAtual;
+
 }
 
-Matrix* PotenciaRegular::getAutoVetor(){
+Matrix PotenciaRegular::getAutovetor(){
     return this->autovetor;
+}
+
+double PotenciaRegular::getAutovalor(){
+    return this->autovalor;
 }
