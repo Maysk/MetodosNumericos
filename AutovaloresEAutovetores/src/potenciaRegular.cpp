@@ -5,28 +5,28 @@ PotenciaRegular::PotenciaRegular(const Matrix A, const Matrix autovetorChute): A
 }
 
 void PotenciaRegular::solve(double precisao){
-    Matrix yAtual = this->autovetorChute;
-    Matrix ySeguinte;
-    Matrix yAtualNormalizado;
+    Matrix xAtual;
+    Matrix xSeguinte;
+    Matrix yAtual;
     double lambdaAtual;
     double lambdaAnterior;
 
-    yAtualNormalizado = yAtual.normalizeVector();
-    ySeguinte = A * yAtualNormalizado;
+    xAtual = this->autovetorChute;
+    yAtual = xAtual.normalizeVector();
+    xSeguinte = A * yAtual;
 
-    lambdaAtual = (yAtualNormalizado.vectorColumnToLine()*ySeguinte).getValue(0,0);
+    lambdaAtual = (yAtual.vectorColumnToLine()*xSeguinte).getValue(0,0);
 
 
     do{
-        yAtual = ySeguinte;
+        yAtual = xSeguinte.normalizeVector();
+        xSeguinte = A * yAtual;
         lambdaAnterior = lambdaAtual;
-        yAtualNormalizado = yAtual.normalizeVector();
-        ySeguinte = A * yAtualNormalizado;
-        lambdaAtual = (yAtualNormalizado.vectorColumnToLine()*ySeguinte).getValue(0,0);
+        lambdaAtual = (yAtual.vectorColumnToLine()*xSeguinte).getValue(0,0);
 
-    }while(abs(lambdaAtual - lambdaAnterior) > precisao);
+    }while(abs(lambdaAtual - lambdaAnterior) >= precisao);
     this->autovalor = lambdaAtual;
-    this->autovetor = yAtualNormalizado;
+    this->autovetor = yAtual;
 
 }
 

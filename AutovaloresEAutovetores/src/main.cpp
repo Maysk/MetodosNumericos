@@ -39,7 +39,7 @@ int main(){
 
     PotenciaRegular p(A , x);
 
-    p.solve(0.1);
+    p.solve(0.01);
 
     cout<<"Autovetor: "<<endl;
     p.getAutovetor().printMatrix();
