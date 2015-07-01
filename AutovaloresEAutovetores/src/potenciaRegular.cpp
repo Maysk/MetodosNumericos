@@ -14,7 +14,7 @@ void PotenciaRegular::solve(double precisao){
     yAtualNormalizado = yAtual.normalizeVector();
     ySeguinte = A * yAtualNormalizado;
 
-    lambdaAtual = (yAtualNormalizado.vectorColumnToLine()).internProduct(ySeguinte);
+    lambdaAtual = (yAtualNormalizado.vectorColumnToLine()*ySeguinte).getValue(0,0);
 
 
     do{
@@ -22,8 +22,7 @@ void PotenciaRegular::solve(double precisao){
         lambdaAnterior = lambdaAtual;
         yAtualNormalizado = yAtual.normalizeVector();
         ySeguinte = A * yAtualNormalizado;
-        lambdaAtual = (yAtualNormalizado.vectorColumnToLine()).internProduct(ySeguinte);
-
+        lambdaAtual = (yAtualNormalizado.vectorColumnToLine()*ySeguinte).getValue(0,0);
 
     }while(abs(lambdaAtual - lambdaAnterior) > precisao);
     this->autovalor = lambdaAtual;
