@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1435788140 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
+1435801660 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
 	"../lib/imports.h"
 
-1435759012 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
+1435800729 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
 	<iostream>
 	<cmath>
 	<exception>
@@ -11,10 +11,12 @@
 	"matrix.h"
 	"potenciaRegular.h"
 	"potenciaInversa.h"
+	"householder.h"
+	"jacobi.h"
 
-1435783361 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
+1435793066 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
 
-1435783681 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
+1435800345 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
 	"../lib/imports.h"
 
 1435280630 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\exceptions.h
@@ -23,11 +25,20 @@
 
 1435769072 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciaregular.h
 
-1435786579 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
+1435788499 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
 	"../lib/imports.h"
 
 1435769191 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciainversa.h
 
-1435788295 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciainversa.cpp
+1435788485 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciainversa.cpp
 	"../lib/imports.h"
+
+1435801636 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\householder.h
+
+1435801625 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\householder.cpp
+	"../lib/imports.h"
+
+1435802498 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\jacobi.h
+
+1435800758 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\jacobi.cpp
 

@@ -6,6 +6,8 @@
 #include "matrix.h"
 #include "potenciaRegular.h"
 #include "potenciaInversa.h"
+#include "householder.h"
+#include "jacobi.h"
 
 #define NOT_MULTIPLIABLE 43
 #define NOT_SUB 42

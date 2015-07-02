@@ -210,8 +210,8 @@ Matrix Matrix::getTransposedOfSquareMatrix(){
                 trans.setValue(j, i, this->getValue(i,j));
                 trans.setValue(i, j, this->getValue(j,i));
             }
-        return trans;
         }
+        return trans;
     }
     else{
         throw GENERIC_ERROR;
@@ -284,3 +284,5 @@ Matrix Matrix::generateIdentityMatrix(int numberOfLines){
     }
     return identity;
 }
+
+

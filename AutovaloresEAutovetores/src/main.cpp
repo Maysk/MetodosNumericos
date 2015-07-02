@@ -15,7 +15,7 @@ int main(){
     A.setValue(1,1,-5);
 
 */
-    /*Outro caso de teste*/
+    /*Outro caso de teste
 
     Matrix A(3,3);
     Matrix x(3,1);
@@ -33,7 +33,33 @@ int main(){
     A.setValue(2,1,2);
     A.setValue(2,2,8);
 
+*/
 
+/*mais um caso de teste: */
+
+    Matrix A(4,4);
+
+    A.setValue(0,0,4);
+    A.setValue(0,1,3);
+    A.setValue(0,2,2);
+    A.setValue(0,3,1);
+
+    A.setValue(1,0,3);
+    A.setValue(1,1,6);
+    A.setValue(1,2,1);
+    A.setValue(1,3,4);
+
+    A.setValue(2,0,2);
+    A.setValue(2,1,1);
+    A.setValue(2,2,8);
+    A.setValue(2,3,2);
+
+    A.setValue(3,0,1);
+    A.setValue(3,1,4);
+    A.setValue(3,2,2);
+    A.setValue(3,3,10);
+
+/*
     cout<<"Matriz A: "<<endl;
     A.printMatrix();
     cout<<"chute x: "<<endl;
@@ -70,7 +96,17 @@ int main(){
     w.printMatrix();
     cout<<"autovetor*autovalor: "<<endl;
     z.printMatrix();
+*/
 
+/*
+    Householder h(A);
+    h.tridiagonalizar();
+    Matrix resultado = h.getMatrixT();
+    Matrix matrixHouse = h.getMatrixH();
+    matrixHouse.printMatrix();
+    resultado.printMatrix();
+    (matrixHouse.getTransposedOfSquareMatrix()*A*matrixHouse).printMatrix();
+*/
 
 
 }
