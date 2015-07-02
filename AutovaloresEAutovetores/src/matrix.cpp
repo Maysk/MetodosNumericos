@@ -218,6 +218,14 @@ Matrix Matrix::getTransposedOfSquareMatrix(){
     }
 }
 
+Matrix Matrix::trocaLinhas(int i, int j) const{
+    Matrix trocada = (*this);
+    for(int k = 0; k< this->numberOfColumns; k++){
+        trocada.setValue(i,k, this->getValue(j,k));
+        trocada.setValue(j,k, this->getValue(i,k));
+    }
+    return trocada;
+}
 
 
 Matrix Matrix::getInverse() const{
@@ -237,8 +245,8 @@ Matrix Matrix::getInverse() const{
                 }
             }
             if(pivo!=0){
-                original.trocaLinhas(k,linhaDoMaximo);
-                inverse.trocaLinhas(k,linhaDoMaximo);
+                original = original.trocaLinhas(k,linhaDoMaximo);
+                inverse = inverse.trocaLinhas(k,linhaDoMaximo);
 
                 for(int j=k; j < this->numberOfLines; j++){
                     original.setValue(k,j, original.getValue(k,j)/pivo);
@@ -263,8 +271,7 @@ Matrix Matrix::getInverse() const{
                 }
             }
         }
-        cout<<"aqui: "<<endl;
-        original.printMatrix();
+
         return inverse;
     }
     else{

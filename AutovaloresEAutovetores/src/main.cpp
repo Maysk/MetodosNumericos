@@ -110,9 +110,12 @@ int main(){
 
     cout <<"-------------------- Metodo da Potencia com deslocamento ---------------------"<<endl;
 
-    PotenciaComDeslocamento pdeslocameno(A , x, 10);
+    PotenciaComDeslocamento pdeslocameno(A , x, 9);
     pdeslocameno.solve(0.00001);
-
+    cout<<"Matrix A"<<endl;
+    A.printMatrix();
+    cout<<"Matrix A deslocada: "<<endl;
+    pdeslocameno.getMatrixADeslocada().printMatrix();
     cout<<"Autovetor: "<<endl;
     pdeslocameno.getAutovetor().printMatrix();
     cout<<"Autovalor: "<<endl;

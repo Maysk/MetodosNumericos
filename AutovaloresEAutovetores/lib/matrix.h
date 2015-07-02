@@ -14,7 +14,7 @@ public:
     double getValue(int line, int column) const;
     int getNumberOfLines() const;
     int getNumberOfColumns() const;
-    Matrix trocaLinhas();
+    Matrix trocaLinhas(int i, int j) const;
     Matrix getTransposedOfSquareMatrix();
     Matrix getCopy();
     Matrix getInverse() const;

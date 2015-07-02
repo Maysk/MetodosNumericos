@@ -6,8 +6,8 @@ PotenciaComDeslocamento::PotenciaComDeslocamento(Matrix A, Matrix autovetorChute
 }
 
 double PotenciaComDeslocamento::getAutovalor(){
-    double resultado = (1/pInv.getAutovalor())+deslocamento;
-    return 1/resultado;
+    double resultado = pInv.getAutovalor()+deslocamento;
+    return resultado;
 }
 
 double PotenciaComDeslocamento::getDeslocamento(){
