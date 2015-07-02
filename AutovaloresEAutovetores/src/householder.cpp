@@ -23,7 +23,7 @@ int Householder::getSinal(double x){
 
 void Householder::tridiagonalizar(){
     int k,i,j;
-    double numberOfLines = A.getNumberOfLines();
+    int numberOfLines = A.getNumberOfLines();
     Matrix H = Matrix::generateIdentityMatrix(numberOfLines);
     Matrix T = A;
     Matrix Hj;

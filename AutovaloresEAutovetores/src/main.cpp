@@ -107,6 +107,8 @@ int main(){
     resultado.printMatrix();
     (matrixHouse.getTransposedOfSquareMatrix()*A*matrixHouse).printMatrix();
 */
-
+    Jacobi jacobi(A);
+    jacobi.diagonalizarMatrix(0.0001);
+    jacobi.getMatrixResultado().printMatrix();
 
 }
