@@ -15,7 +15,7 @@ int main(){
     A.setValue(1,1,-5);
 
 */
-    /*Outro caso de teste
+    /*Outro caso de teste*/
 
     Matrix A(3,3);
     Matrix x(3,1);
@@ -33,9 +33,9 @@ int main(){
     A.setValue(2,1,2);
     A.setValue(2,2,8);
 
-*/
 
-/*mais um caso de teste: */
+
+/*mais um caso de teste:
 
     Matrix A(4,4);
 
@@ -58,7 +58,7 @@ int main(){
     A.setValue(3,1,4);
     A.setValue(3,2,2);
     A.setValue(3,3,10);
-
+*/
 /*
     cout<<"Matriz A: "<<endl;
     A.printMatrix();
