@@ -1,22 +1,12 @@
 #include "../lib/imports.h"
 
-DerivadaSegunda::DerivadaSegunda(double deltaX):DerivadaNumerica(deltaX){}
+DerivadaSegunda::DerivadaSegunda(double deltaX):DerivadaNumerica(deltaX),d(deltaX){}
 
 double DerivadaSegunda::metodoForward(double pontoX, int precisaoEscolhida){
     double resultado;
     double delta = getDeltaX();
-    switch(precisaoEscolhida){
-        case 1:
-            resultado = funcao(pontoX + 2*delta) - 2*funcao(pontoX + delta) + funcao(pontoX);
-            resultado = resultado/pow(delta,2);
-        break;
-        case 2:
-            //TODO: Calcular e implementar.
-        break;
-        default:
-            throw PrecisaoNaoDefinidaParaEsteMetodo();
-        break;
-    }
+    resultado = d.metodoForward(pontoX+delta,precisaoEscolhida) - d.metodoForward(pontoX,precisaoEscolhida);
+    resultado = resultado/delta;
     return resultado;
 
 }
@@ -24,36 +14,16 @@ double DerivadaSegunda::metodoForward(double pontoX, int precisaoEscolhida){
 double DerivadaSegunda::metodoBackward(double pontoX, int precisaoEscolhida){
     double resultado;
     double delta = getDeltaX();
-    switch(precisaoEscolhida){
-        case 1:
-            resultado = funcao(pontoX) - 2*funcao(pontoX - delta) + funcao(pontoX - 2*delta);
-            resultado = resultado/pow(delta,2);
-        break;
-        case 2:
-            //TODO: Calcular e implementar.
-        break;
-        default:
-            throw PrecisaoNaoDefinidaParaEsteMetodo();
-        break;
-    }
+    resultado = d.metodoBackward(pontoX, precisaoEscolhida) - d.metodoBackward(pontoX-delta, precisaoEscolhida);
+    resultado = resultado/delta;
     return resultado;
 }
 
 double DerivadaSegunda::metodoCentral(double pontoX, int precisaoEscolhida){
     double resultado;
     double delta = getDeltaX();
-    switch(precisaoEscolhida){
-        case 1:
-            resultado = funcao(pontoX + delta) - 2*funcao(pontoX) + funcao(pontoX - delta);
-            resultado = resultado/pow(delta,2);
-        break;
-        case 2:
-            //TODO: Calcular e implementar.
-        break;
-        default:
-            throw PrecisaoNaoDefinidaParaEsteMetodo();
-        break;
-    }
+    resultado = d.metodoCentral(pontoX+delta, precisaoEscolhida) - d.metodoCentral(pontoX-delta,precisaoEscolhida);
+    resultado = resultado/(2*delta);
     return resultado;
 
 }

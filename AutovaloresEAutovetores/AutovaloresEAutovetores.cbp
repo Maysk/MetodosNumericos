@@ -35,14 +35,18 @@
 		<Unit filename="lib/imports.h" />
 		<Unit filename="lib/jacobi.h" />
 		<Unit filename="lib/matrix.h" />
+		<Unit filename="lib/potenciaComDeslocamento.h" />
 		<Unit filename="lib/potenciaInversa.h" />
 		<Unit filename="lib/potenciaRegular.h" />
+		<Unit filename="lib/qr.h" />
 		<Unit filename="src/householder.cpp" />
 		<Unit filename="src/jacobi.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/matrix.cpp" />
+		<Unit filename="src/potenciaComDeslocamento.cpp" />
 		<Unit filename="src/potenciaInversa.cpp" />
 		<Unit filename="src/potenciaRegular.cpp" />
+		<Unit filename="src/qr.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

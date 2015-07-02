@@ -1,4 +1,5 @@
 class DerivadaSegunda : public DerivadaNumerica{
+    DerivadaPrimeira d;
 public:
     DerivadaSegunda(double Deltax);
     double metodoForward(double pontoX, int precisaoEscolhida);

@@ -33,10 +33,10 @@ void solve(char opcao){
         case 'd': case 'j':
             resultado = derivada->metodoBackward(pontoX,2);
         break;
-        case 'e': case 'l':
+        case 'e': case 'k':
             resultado = derivada->metodoCentral(pontoX,1);
         break;
-        case 'f': case 'k':
+        case 'f': case 'l':
             resultado = derivada->metodoCentral(pontoX,2);
         break;
     }

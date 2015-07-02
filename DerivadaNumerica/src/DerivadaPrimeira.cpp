@@ -46,7 +46,7 @@ double DerivadaPrimeira::metodoCentral(double pontoX, int precisaoEscolhida){
     switch(precisaoEscolhida){
         case 1:
             resultado = funcao(pontoX + delta) - funcao(pontoX - delta);
-            resultado = resultado/2*delta;
+            resultado = resultado/(2*delta);
         break;
         case 2:
             resultado =   (-1)*funcao(pontoX + 2*delta) + 8*funcao(pontoX + delta) - 8*funcao(pontoX - delta) + funcao(pontoX - 2 * delta);

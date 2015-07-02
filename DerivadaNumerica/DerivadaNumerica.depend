@@ -2,7 +2,7 @@
 1432605032 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadanumerica.cpp
 	"../lib/imports.h"
 
-1433291689 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\main.cpp
+1435863802 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\main.cpp
 	"../lib/imports.h"
 
 1433291223 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\imports.h
@@ -16,12 +16,12 @@
 
 1433286753 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadaprimeira.h
 
-1433286758 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadasegunda.h
+1435862986 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadasegunda.h
 
-1433286763 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadaprimeira.cpp
+1435864105 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadaprimeira.cpp
 	"../lib/imports.h"
 
-1433286725 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadasegunda.cpp
+1435864124 source:c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\src\derivadasegunda.cpp
 	"../lib/imports.h"
 
 1433289821 c:\users\matheus\documents\cprojects\metodosnumericos\derivadanumerica\lib\derivadanumerica.h
