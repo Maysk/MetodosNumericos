@@ -1,7 +1,7 @@
 #include "../lib/imports.h"
 
-PotenciaInversa::PotenciaInversa(const Matrix AInv, const Matrix autovetorChute): AInv(AInv), autovetorChute(autovetorChute){
-
+PotenciaInversa::PotenciaInversa(const Matrix A, const Matrix autovetorChute): A(A), autovetorChute(autovetorChute){
+    this->AInv = A.getInverse();
 }
 
 void PotenciaInversa::solve(double precisao){
@@ -26,6 +26,20 @@ void PotenciaInversa::solve(double precisao){
     this->autovalor = 1/lambdaAtual;
     this->autovetor = yAtual;
 }
+
+
+Matrix PotenciaInversa::getMatrixA(){
+    return this->A;
+}
+
+Matrix PotenciaInversa::getMatrixInv(){
+    return this->AInv;
+}
+
+Matrix PotenciaInversa::getAutovetorChute(){
+    return this->autovetorChute;
+}
+
 
 Matrix PotenciaInversa::getAutovetor(){
     return this->autovetor;

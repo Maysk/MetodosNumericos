@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1435808423 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
+1435846862 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\main.cpp
 	"../lib/imports.h"
 
-1435800729 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
+1435842778 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\imports.h
 	<iostream>
 	<cmath>
 	<exception>
@@ -11,26 +11,28 @@
 	"matrix.h"
 	"potenciaRegular.h"
 	"potenciaInversa.h"
+	"potenciaComDeslocamento.h"
 	"householder.h"
 	"jacobi.h"
+	"qr.h"
 
-1435793066 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
+1435842270 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\matrix.h
 
-1435800345 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
+1435842277 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\matrix.cpp
 	"../lib/imports.h"
 
 1435280630 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\exceptions.h
 
 1435279873 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\exceptions.cpp
 
-1435769072 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciaregular.h
+1435843692 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciaregular.h
 
-1435788499 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
+1435843772 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciaregular.cpp
 	"../lib/imports.h"
 
-1435769191 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciainversa.h
+1435843417 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciainversa.h
 
-1435788485 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciainversa.cpp
+1435843626 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciainversa.cpp
 	"../lib/imports.h"
 
 1435801636 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\householder.h
@@ -40,6 +42,16 @@
 
 1435808214 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\jacobi.h
 
-1435808717 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\jacobi.cpp
+1435840684 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\jacobi.cpp
+	"../lib/imports.h"
+
+1435838777 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\qr.h
+
+1435840322 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\qr.cpp
+	"../lib/imports.h"
+
+1435845779 c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\lib\potenciacomdeslocamento.h
+
+1435846777 source:c:\users\matheus\documents\cprojects\metodosnumericos\autovaloreseautovetores\src\potenciacomdeslocamento.cpp
 	"../lib/imports.h"
 

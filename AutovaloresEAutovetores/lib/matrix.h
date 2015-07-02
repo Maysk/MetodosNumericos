@@ -14,10 +14,11 @@ public:
     double getValue(int line, int column) const;
     int getNumberOfLines() const;
     int getNumberOfColumns() const;
+    Matrix trocaLinhas();
     Matrix getTransposedOfSquareMatrix();
     Matrix getCopy();
-    Matrix getInverse();
-    bool isSquareMatrix();
+    Matrix getInverse() const;
+    bool isSquareMatrix() const;
     void printMatrix();
 
     //Operacoes para vetores

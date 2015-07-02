@@ -31,10 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lib/householder.h" />
 		<Unit filename="lib/imports.h" />
+		<Unit filename="lib/jacobi.h" />
 		<Unit filename="lib/matrix.h" />
 		<Unit filename="lib/potenciaInversa.h" />
 		<Unit filename="lib/potenciaRegular.h" />
+		<Unit filename="src/householder.cpp" />
+		<Unit filename="src/jacobi.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/matrix.cpp" />
 		<Unit filename="src/potenciaInversa.cpp" />

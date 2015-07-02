@@ -29,6 +29,14 @@ void PotenciaRegular::solve(double precisao){
 
 }
 
+Matrix PotenciaRegular::getMatrixA(){
+    return this->A;
+}
+
+Matrix PotenciaRegular::getAutovetorChute(){
+    return this->autovetorChute;
+}
+
 Matrix PotenciaRegular::getAutovetor(){
     return this->autovetor;
 }
