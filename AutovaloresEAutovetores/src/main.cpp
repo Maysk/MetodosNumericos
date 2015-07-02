@@ -70,7 +70,7 @@ int main(){
     A.setValue(3,3,10);
 //*/
 
-/*  Metodos da potencia Demo*/
+/*  Metodos da potencia Demo
     cout <<"-- Entrada --"<<endl;
     cout<<"Matriz A: "<<endl;
     A.printMatrix();
@@ -149,7 +149,7 @@ int main(){
 
 //*/
 
-/*  QR Demo
+/*  QR Demo*/
     QR qr(A);
     qr.transformarEmTriangularSuperior(0.0000001);
     qr.getMatrixResultado().printMatrix();

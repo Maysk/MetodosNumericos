@@ -61,12 +61,8 @@ void QR::transformarEmTriangularSuperior(double precisao){
                 Qij = this->generateRotationMatrix(Ak,i,j);
                 Ak = Qij.getTransposedOfSquareMatrix() * Ak;
                 QK=QK*Qij;
-                cout<<"Q i: "<<i<<"\t j : "<<j<<endl;
-                Qij.printMatrix();
             }
         }
-        cout<<"AK: "<<endl;
-        Ak.printMatrix();
         QC = QC * QK;
     }while(!isTriangularSuperior(Ak, precisao));
     this->Q = QC;
