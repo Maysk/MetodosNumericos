@@ -52,21 +52,25 @@ void QR::transformarEmTriangularSuperior(double precisao){
     int numberOfLines = A.getNumberOfLines();
     Matrix QC = Matrix::generateIdentityMatrix(numberOfLines);
     Matrix QK;
+    Matrix R;
     Matrix Ak = A;
     Matrix Qij;
+    QK = Matrix::generateIdentityMatrix(numberOfLines);
     do{
-        QK = Matrix::generateIdentityMatrix(numberOfLines);
         for(int j = 0; j<numberOfLines-1; j++){
             for(int i = j+1; i<numberOfLines; i++){
-                Qij = this->generateRotationMatrix(Ak,i,j);
+                Qij = this->generateRotationMatrix(Ak, i, j);
                 Ak = Qij.getTransposedOfSquareMatrix() * Ak;
-                QK=QK*Qij;
+                QK = QK * Qij;
             }
         }
-        QC = QC * QK;
-    }while(!isTriangularSuperior(Ak, precisao));
-    this->Q = QC;
-    this->Resultado = Ak;
+
+        R = QK.getTransposedOfSquareMatrix() * Ak;
+        //(QK.getTransposedOfSquareMatrix()*A*Q).printMatrix();
+
+    }while(!isTriangularSuperior(R, precisao));
+    this->Q = QK;
+    this->Resultado = R;
 
 }
 

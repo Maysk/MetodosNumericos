@@ -5,17 +5,13 @@ int main(){
 
 /*  Caso de teste 0:
     Matrix A(3,3);
-    A.setValue(0,0,4);
-    A.setValue(0,1,2);
-    A.setValue(0,2,1);
+    A.setValue(0,0,4);    A.setValue(0,1,2);    A.setValue(0,2,1);
+    A.setValue(1,1,2);    A.setValue(1,2,8);    A.setValue(1,0,2);
+    A.setValue(2,0,1);    A.setValue(2,1,2);    A.setValue(2,2,6);
 
-    A.setValue(1,1,2);
-    A.setValue(1,2,8);
-    A.setValue(1,0,2);
+    Matrix x(3,1);
+    x.setValue(0,0,2);     x.setValue(1,0,9);     x.setValue(2,0,7);
 
-    A.setValue(2,0,1);
-    A.setValue(2,1,2);
-    A.setValue(2,2,6);
 
 //*/
 
@@ -33,11 +29,10 @@ int main(){
 //*/
 
 /*  Caso de Teste 2:*/
-
-    Matrix A(3,3);
     Matrix x(3,1);
     x.setValue(0,0,2);     x.setValue(1,0,9);     x.setValue(2,0,7);
 
+    Matrix A(3,3);
     A.setValue(0,0,10);    A.setValue(0,1,6);     A.setValue(0,2,4);
     A.setValue(1,1,6);     A.setValue(1,2,2);     A.setValue(1,0,6);
     A.setValue(2,0,4);     A.setValue(2,1,2);     A.setValue(2,2,8);
@@ -130,28 +125,47 @@ int main(){
 
 //*/
 
-/*  Householder Demo
-
+/*  Householder Demo*/
+    cout<<"\n\n------------- Metodo Householder -----------------"<<endl;
+    cout<<"--- Matrix A ---"<<endl;
+    A.printMatrix();
     Householder h(A);
     h.tridiagonalizar();
-    Matrix resultado = h.getMatrixT();
-    Matrix matrixHouse = h.getMatrixH();
-    matrixHouse.printMatrix();
-    resultado.printMatrix();
-    (matrixHouse.getTransposedOfSquareMatrix()*A*matrixHouse).printMatrix();
+    cout <<"--- A TriDiagonalizada T---" << endl;
+    h.getMatrixT().printMatrix();
+    cout <<"--- Matriz de Householder H---" << endl;
+    h.getMatrixH().printMatrix();
+    cout <<"--- Ht * A * H---" << endl;
+    (h.getMatrixH().getTransposedOfSquareMatrix()*A*h.getMatrixH()).printMatrix();
 //*/
 
-/* Jacobi Demo
-
+/* Jacobi Demo */
+    cout<<"\n\n------------- Metodo Jacobi -----------------"<<endl;
+    cout<<"--- Matrix A ---"<<endl;
+    A.printMatrix();
     Jacobi jacobi(A);
     jacobi.diagonalizarMatrix(0.0001);
+    cout <<"--- A Diagonalizada ---" << endl;
     jacobi.getMatrixResultado().printMatrix();
-
-//*/
+    cout <<"--- J Resultante ---" <<endl;
+    jacobi.getMatrixJ().printMatrix();
+//
 
 /*  QR Demo*/
+    cout<<"\n\n------------- Metodo QR -----------------"<<endl;
+    cout<<"--- Matrix A ---"<<endl;
+    A.printMatrix();
     QR qr(A);
-    qr.transformarEmTriangularSuperior(0.0000001);
+    qr.transformarEmTriangularSuperior(0.001);
+    cout <<"--- Triangular resultante ---" << endl;
     qr.getMatrixResultado().printMatrix();
+    cout <<"--- Q Resultante ---" <<endl;
+    qr.getMatrixQ().printMatrix();
+
+    cout <<"--- Q * R ---" <<endl;
+    (qr.getMatrixQ()*qr.getMatrixResultado()).printMatrix();
+    cout <<"--- R * Q ---" <<endl;
+    (qr.getMatrixResultado()*qr.getMatrixQ()).printMatrix();
+
 //*/
 }
